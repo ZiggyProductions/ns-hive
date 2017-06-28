@@ -1,0 +1,35 @@
+{
+  "name": "@netshards/ns-hive",
+  "version": "1.0.0",
+  "description": "NetShards Hive service. Manages Cell nodes with PM2 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZiggyProductions/ns-hive.git"
+  },
+  "keywords": [
+    "netshards"
+  ],
+  "author": "Gevorg Aznauryan aka GAZ <gazilius@gmail.com> (http://ziggy.productions/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZiggyProductions/ns-hive/issues"
+  },
+  "homepage": "https://github.com/ZiggyProductions/ns-hive#readme",
+  "devDependencies": {
+    "better-assert": "^1.0.2",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.4.2",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
+  },
+  "dependencies": {
+    "@netshards/ns-monitor": "^1.0.4",
+    "dotenv": "^4.0.0",
+    "pm2": "^2.5.0"
+  }
+}

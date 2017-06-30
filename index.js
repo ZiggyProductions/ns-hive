@@ -5,6 +5,7 @@ require('dotenv').config({path: __dirname+'/.env'});
 var pm2 = require('pm2');
 var pj = require('./package.json');
 var os = require('os');
+var _ = require('underscore');
 
 pm2.connect(function(err) {
     if (err) {
@@ -37,6 +38,10 @@ var client = require('@netshards/ns-monitor').client(options);
 
 setInterval(function(){
     pm2.list(function(err,list){
+        list = _.filter(list,(p)=>{
+            return p.name.substr(0,3) == 'NS-';
+        })
+        console.log(list);
         client.emit('host-data', {hostname:os.hostname(),processes:list});
     })
 },10000);
